@@ -1,4 +1,5 @@
-# sddm-astronaut-theme
+# rega-sddm-theme
+## Forked from [Keyitdev/sddm-astronaut-theme](https://github.com/keyitdev/sddm-astronaut-theme)
 
 A theme for the [SDDM login manager](https://github.com/sddm/sddm).
 
@@ -8,12 +9,6 @@ A theme for the [SDDM login manager](https://github.com/sddm/sddm).
 ### Preview
 
 You can easily change how it looks in **[config](./theme.conf)**. 
-Here are some examples:
-
-![Preview](./Previews/preview1.png)
-![Preview](./Previews/preview2.png)
-![Preview](./Previews/preview3.png)
-![Preview](./Previews/preview4.png)
 
 ### Dependencies
 
@@ -35,33 +30,15 @@ sddm-qt6 qt6-svg
 1. Clone this repository, copy fonts to `/usr/share/fonts/`:
 
    ```sh
-   sudo git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
-   sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
+   sudo git clone https://github.com/regarager/rega-sddm-theme.git /usr/share/sddm/themes/rega-sddm-theme
+   sudo cp /usr/share/sddm/themes/rega-sddm-theme/Fonts/* /usr/share/fonts/
    ```
 
 2. Then edit `/etc/sddm.conf`, so that it looks like this:
 
     ```sh
     echo "[Theme]
-    Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
-    ```
-
-
-### Virtual keyboard
-
-![Preview](./Previews/preview5.png)
-
-#### Arch
-1. Install package.
-    ```sh
-    sddm qt6-virtualkeyboard
-    ```
-
-2. Then edit `/etc/sddm.conf.d/virtualkbd.conf`, so that it looks like this:
-
-    ```sh
-    [General]
-    InputMethod=qtvirtualkeyboard
+    Current=rega-sddm-theme" | sudo tee /etc/sddm.conf
     ```
 
 ### Credits

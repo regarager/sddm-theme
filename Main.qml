@@ -7,6 +7,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 import QtQuick.Effects
+import Qt5Compat.GraphicalEffects
 
 import "Components"
 
@@ -31,7 +32,7 @@ Pane {
     palette.mid: config.LoginButtonTextColor == "" ? config.TextColor : config.LoginButtonTextColor
     palette.alternateBase: config.BackgroundListColor == "" ? config.BackgroundColor: config.BackgroundListColor
     palette.toolTipBase: config.HoverSessionAndVirtualKeyboard == "" ? config.HighlightColor : config.HoverSessionAndVirtualKeyboard
-    
+
     font.family: config.Font
     font.pointSize: config.FontSize !== "" ? config.FontSize : parseInt(height / 80)
     focus: true
@@ -92,19 +93,19 @@ Pane {
             anchors.left: config.FormPosition == "left" ? parent.left : undefined
             anchors.right: config.FormPosition == "right" ? parent.right : undefined
             z: 1
-            
+
             SessionButton {
                 id: sessionSelect
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: parent.height/16
             }
         }
-        
+
         Button {
             id: vkb
             checkable: true
             onClicked: virtualKeyboard.switchState()
-           
+
             Keys.onReturnPressed: {
                 toggle();
                 virtualKeyboard.switchState();
